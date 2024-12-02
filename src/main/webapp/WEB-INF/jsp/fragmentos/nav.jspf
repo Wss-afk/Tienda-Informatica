@@ -1,0 +1,79 @@
+<%@ page import="org.iesbelen.model.Usuario" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nav</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        #nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: rgba(143, 188, 192);
+        }
+
+        #nav-bar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #nav-bar ul li {
+            margin: 0 15px;
+        }
+
+        #nav-bar ul li a {
+            text-decoration: none;
+            color: blueviolet;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #login {
+            background: unset;
+            border: unset;
+        }
+
+        #login a {
+            text-decoration: none;
+            color: blueviolet;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<nav id="nav-bar">
+    <ul>
+        <li><a href="<%=application.getContextPath()%>/"><i class="fa-solid fa-house"></i>&nbsp;HOME</a></li>
+        <li><a href="<%=application.getContextPath()%>/tienda/fabricantes"><i class="fa-solid fa-industry"></i>&nbsp;Fabricantes</a></li>
+        <li><a href="<%=application.getContextPath()%>/tienda/productos"><i class="fa-brands fa-product-hunt"></i>&nbsp;Productos</a></li>
+        <li><a href="<%=application.getContextPath()%>/tienda/usuarios/"><i class="fa-solid fa-user"></i>&nbsp;Usuarios</a></li>
+    </ul>
+    <div id="login">
+        <%
+            Usuario usuarioLogado = (Usuario) request.getSession().getAttribute("usuario-logado");
+            if (usuarioLogado != null) {
+        %>
+        <form action="<%=application.getContextPath()%>/tienda/usuarios/logout" method="post" style="display:inline;">
+            <span>Bienvenido, <%= usuarioLogado.getUsuario() %>!</span>
+            <button type="submit" style="background:unset; border:none; color:blueviolet; font-size:20px; cursor:pointer;">
+                <i class="fa-solid fa-right-from-bracket"></i>&nbsp;Logout
+            </button>
+        </form>
+        <%
+          } else {
+        %>
+        <a href="<%=application.getContextPath()%>/tienda/usuarios/login"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;LOGIN</a>
+        <%
+            }
+        %>
+    </div>
+</nav>
+
+</body>
+
+</html>

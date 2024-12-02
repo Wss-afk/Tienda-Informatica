@@ -1,0 +1,32 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: wang1
+  Date: 21-Nov-24
+  Time: 1:25 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<html lang="en">
+
+<head>
+
+    <title>footer</title>
+    <style>
+        #footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(143, 188, 192, 0.3);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<div id="footer">
+    <p>Copyright &copy; 2025 Tienda Informatica</p>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: wang1
+  Date: 21-Nov-24
+  Time: 1:24 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<html>
+<head>
+    <title>Header</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: rgb(143, 188, 192);
+            background: fixed linear-gradient(30deg, rgba(143, 188, 192, 1) 7%, rgba(220, 223, 218, 1) 36%, rgba(235, 230, 223, 1) 64%, rgba(143, 188, 192, 1) 88%);
+            padding: 0;
+        }
+
+        h1 {
+            color: rgb(34, 174, 78);
+            font-size: 40px;
+        }
+
+        h3 {
+            color: rgb(94, 198, 62);
+        }
+    </style>
+</head>
+
+<body>
+<h1>Tienda Informatica</h1>
+<h3>Sitio de mantenimiento de tienda Informatica</h3>
+
+
+</body>
+</html>
